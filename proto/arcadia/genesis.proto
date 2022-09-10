@@ -1,0 +1,14 @@
+syntax = "proto3";
+package arcadia.arcadia;
+
+import "gogoproto/gogo.proto";
+import "arcadia/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "arcadia/x/arcadia/types";
+
+// GenesisState defines the arcadia module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
